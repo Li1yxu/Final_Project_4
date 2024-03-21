@@ -1,0 +1,50 @@
+---
+title: "Final Project - Obesity Data"
+author: "Ying Xu"
+date: "`r Sys.Date()`"
+output:
+  html_document:
+    toc: TRUE
+    toc_float: true
+    theme: journal
+---
+
+# INTRODUCTION
+
+This dataset was posted on *Kaggle*, named Obesity Prediction. It includes a set of variables: age, height, weight, BMI and physical activity level, providing valuable perspectives on the factors that impact the outcome of obesity. The purpose of this report is to demonstrate basic descriptive information about the dataset and generate an analysis of the association among the variables, providing insights for future researches to make predictions about the prevalence of obesity between genders or age groups.
+
+# DATA ANALYSIS
+
+```{r, load_dataset, message=FALSE}
+here::i_am("obesity_report.Rmd")
+data_location <- here::here("data", "obesity_data.csv")
+obesity_data <- read.csv(data_location, header = TRUE)
+```
+
+## 1. Tabular Analysis
+
+Tabular Analysis Characteristics of `r nrow(obesity_data)` patients from the Kaggle database are displayed in the table below.
+
+```{r, table1, message=FALSE, warning=FALSE}
+obesity_data_table1 <- readRDS(file = here::here("output/table_data_1.rds"))
+table_1 <- readRDS(file = here::here("output/table_1.rds"))
+table_1
+```
+```{r, table1_description, message=FALSE, warning=FALSE}
+library(dplyr)
+females <- subset(obesity_data, Gender == "Female")
+males <- subset(obesity_data, Gender == "Male")
+```
+Table 1: Summary of the mean age, height(cm), weight(kg) and BMI in `r count(females)` female patients and `r count(males)` male patients. The mean age for female patients is 49.17, 
+and for male patient is 50.48 years old. Female patients has a mean weight of 71.77 kg and male patients has a mean weight of 70.69 kg. The mean BMI for female patients is 25.12 and for male patient is 24.68.
+
+## 2. Graphical Analysis
+
+Graphical Analysis of the relationship between age and BMI level is displayed in the figure below.
+
+```{r, figure1, message=FALSE, warning=FALSE, fig.align = 'center'}
+figure_1 <- readRDS(file = here::here("output/figure_1.rds"))
+figure_1
+```
+
+Figure 1: Distribution of BMI for patients at different ages, fitting under linear relationship model.
