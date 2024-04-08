@@ -19,3 +19,7 @@ output/figure_1.rds: code/02_figure1.R
 .PHONY: clean
 clean:
 	rm -rf output/*
+	
+.PHONY: install
+install:
+	Rscript -e "renv::restore(prompt = FALSE)"
