@@ -37,7 +37,12 @@ Use `make obesity_report.html`
 
 ## Instructions on synchronizing the package repository
 
-Use `make install`
+Install R and `renv` package. 
+Run the command `make install` in the terminal within the project directory.
+
+## Instructions on using the make target
+
+
 
 
 
