@@ -24,6 +24,8 @@ The contents of the report includes a description of the data set that I chose t
   - `00_table1_data.R` and `01_table.R`generates the table
   
   - `02_figure1.R` generates the figure
+  
+  - `03_render_report.R` generates the report
 
 ## In the output folder
 
@@ -33,7 +35,7 @@ The contents of the report includes a description of the data set that I chose t
   
 ## Instructions on making the report
 
-Use `make obesity_report.html`
+Run the command `make obesity_report.html`
 
 ## Instructions on synchronizing the package repository
 
