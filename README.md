@@ -47,6 +47,6 @@ Run the command `make install` in the terminal within the project directory.
 Run the command `make final_project_image` to build the docker image
 
   - Mac users: modify the `make final_report/obesity_report.html` path to
-  `"/$$(pwd)"/final_report:/project/final_report`
+  `"$$(pwd)"/final_report:/project/final_report`
 
   - Windows users: no modification needed, use `make final_report/obesity_report.html` directly

@@ -34,5 +34,5 @@ final_project_image: $(PROJECTFILES) $(RENVFILES)
 	touch $@
 
 final_report/obesity_report.html:
-	docker run -v "$$(pwd)"//final_report:/project/final_report final_project_image
+	docker run -v "/$$(pwd)"/final_report:/project/final_report final_project_image
 
