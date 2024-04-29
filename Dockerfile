@@ -42,7 +42,6 @@ COPY obesity_report.Rmd obesity_report.Rmd
 RUN mkdir -p code
 RUN mkdir -p output
 RUN mkdir -p data
-RUN mkdir -p final_report
 
 #copy file in data
 COPY data/obesity_data.csv data/obesity_data.csv
